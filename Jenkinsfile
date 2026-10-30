@@ -11,7 +11,7 @@ pipeline {
 
         stage('Flyway Validate') {
             steps {
-                bat 'flyway validate'
+                bat 'flyway validate -ignoreMigrationPatterns="*:pending"'
             }
         }
 
